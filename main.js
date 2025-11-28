@@ -10,3 +10,5 @@ document.getElementById("modeSwitch").addEventListener("click", () => {
   document.documentElement.setAttribute("data-bs-theme", newTheme);
   localStorage.setItem("theme", newTheme); // save it
 });
+window.onload = () => {  let toast = document.getElementById("toast");  toast.classList.add("show");  setTimeout(() => toast.classList.remove("show"), 2500);};
+

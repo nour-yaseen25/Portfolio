@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" >
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -11,9 +11,13 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="./main.css" />
-
   </head>
   <body>
+     <div class="bg-layer blobs" id="blobsLayer" aria-hidden="true">
+      <div class="blob b1"></div>
+      <div class="blob b2"></div>
+    </div>
+
     <header class="header nav_pro">
       <nav class="navbar navbar-expand-lg shadow">
         <div class="container">
@@ -32,12 +36,7 @@
             class="collapse navbar-collapse justify-content-between"
             id="mainNav"
           >
-           <div class="form-check form-switch">
-  <input class="form-check-input" type="checkbox" id="modeSwitch">
-  <label for="modeSwitch" class="form-check-label">Dark Mode</label>
-</div>
-
-            <ul class="navbar-nav gap-2 ms-auto">
+            <ul class="navbar-nav gap-2 ms-auto mx-5">
               <li class="nav-item">
                 <a class="nav-link" href="#home">Home</a>
               </li>
@@ -54,14 +53,66 @@
                 <a class="nav-link" href="#contact">Contact</a>
               </li>
             </ul>
+
+            <div class="form-check form-switch">
+               <label for="modeSwitch" class="form-check-label">Dark Mode</label>
+               <input class="form-check-input" type="checkbox" id="modeSwitch" />
+            </div>
           </div>
         </div>
       </nav>
     </header>
+    <div id="toast">Welcome to my website! 👋</div>
+<main class="m-auto d-flex flex-column justify-content-center align-items-center p-5">
+    <section class="content">  
+    <section class="card hero text-center">
+         <div class="avatar m-auto">NY</div>
+         <!--
+        <h3>Nour Ashraf Yaseen</h3>
+        <div class="text-secondary-emphasis">Computer Engineering</div>
+        -->
+        <h1>Hello, I'm Nour Yaseen — Computer Engineering Student</h1>
+        <p>Frontend Developer  - Aspiring Software Engineer</p>
 
+        <div class="d-flex mt-3 gap-3 justify-content-center">
+          <a href="#projects" class="card btn btn-outline-light d-inline-flex align-items-center gap-2 px-3 py-2" role="button" aria-label="View Projects">  View Projects →</a>
+          <a href="#projects" class="card btn btn-outline-light d-inline-flex align-items-center gap-2 px-3 py-2" role="button" aria-label="View Projects"> Download CV</a>
+       </div>
 
+      </section>
+      <section class="card">
+        <h2>About Me</h2>
+       <p>Hello! I'm Nour Yaseen, a Computer Engineering student with a passion for clean code, creative ideas, and user-friendly designs. I enjoy building websites that are not only functional, but also visually appealing and modern. This website is my personal space — a place where I share who I am, my skills, and the projects I’ve worked on. Whether it’s front-end development, responsive design, or learning new tech, I’m always excited to explore more. Feel free to look around and get in touch if you’d like to collaborate, connect, or just say hi!</p>
+        </div>
+      </section>
+       <div class="footer card">Preview: try each background and see how the glass cards and text feel together. Use this to pick the final style for your portfolio.</div>
+ </section>
+ <section class="card">
+        <div class="d-flex flex-column gap-3 mt-2">
+          <div class="proj">
+            <div class="thumb">JS</div>
+            <div>
+              <h4>Interactive Quiz (Frontend)</h4>
+              <p class="text-secondary-emphasis">Vanilla JS quiz with timer & LocalStorage.</p>
+            </div>
+          </div>
+          <div class="proj">
+            <div class="thumb">DB</div>
+            <div>
+              <h4>Inventory System (JavaFX + PostgreSQL)</h4>
+              <p class="text-secondary-emphasis">Desktop app for farm/manufacturing inventory.</p>
+            </div>
+          </div>
+        </div>
+      </section>
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
-<script src="./main.js"></script>
+</main>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./main.js"></script>
   </body>
 </html>

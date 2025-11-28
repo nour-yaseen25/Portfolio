@@ -1,10 +1,162 @@
-
 @import url(./base.css);
-a{
-    color: rgb(0, 0, 0);
+a {
+  color: rgb(0, 0, 0);
 }
 
-.header{
-    font-size: 20px;
+.header {
+  font-size: 20px;
 }
 
+/* 3) Colored Blobs + Glassmorphism */
+/*
+.blobs {
+  background: linear-gradient(180deg, #071023, #0b1220);
+}
+  */
+/* two big blurred blobs */
+/*
+.blobs {
+ position: relative;   
+ overflow: hidden;    
+pointer-events: none;
+}
+
+.blobs .b1 {
+ position: absolute;
+  width: 540px;
+  height: 520px;
+  left: 0;
+  top: 0;
+  transform: translate(-20%, -20%);
+  background: radial-gradient(
+    circle at 30% 30%,
+    #c65b6d,
+    #e18868 40%,
+    transparent 60%
+  );
+}
+.blobs .b2 {
+  width: 540px;
+  height: 520px;
+  right: 0;
+  bottom: 0;
+  transform: translate(20%, 20%);
+  background: radial-gradient(
+    circle at 60% 60%,
+    #00801c,
+    #026026 30%,
+    transparent 60%
+  );
+}
+*/
+
+/* CONTENT AREA */
+.content {
+  z-index: 60;
+  margin: 24px auto;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 25px;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+}
+
+/* glass card */
+.card {
+  background: var(--glass-bg);
+  backdrop-filter: blur(8px);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--card-radius);
+  padding: 20px;
+  max-width: 1200px;
+  box-shadow: 0 6px 30px rgba(2, 6, 23, 0.6);
+}
+
+/* hero */
+.hero {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* small profile card right */
+.profile {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: center;
+  text-align: center;
+}
+.avatar {
+  width: 120px;
+  height: 120px;
+  border-radius: 30px;
+  border: solid;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  font-size: 25px;
+}
+
+.tags {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.tag {
+  padding: 6px 10px;
+  background: rgba(255, 255, 255, 0.04);
+  border-radius: 999px;
+  font-size: 15px;
+}
+
+/* projects list */
+.projects {
+  display: grid;
+  gap: 12px;
+}
+
+.proj {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.proj .thumb {
+  width: 72px;
+  height: 56px;
+  border-radius: 12px;
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.04),
+    rgba(255, 255, 255, 0.02)
+  );
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+}
+
+/* small footer */
+.footer {
+  padding: 8px 20px;
+  text-align: center;
+}
+#toast {
+  position: fixed;
+  top: 50px;
+  right: 50px;
+  color: #fff;
+  padding: 12px 20px;
+  border-radius: 8px;
+  opacity: 0;
+  transform: translateY(-50px);
+  transition: 1s;
+}
+#toast.show {
+  opacity: 1;
+  transform: translateY(0);
+}

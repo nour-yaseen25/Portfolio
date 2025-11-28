@@ -5,7 +5,11 @@
 }
 :root{
     --maincolor:rgb(7, 129, 37);
-     
+   --glass-bg: rgba(255,255,255,0.06);
+    --glass-border: rgba(255,255,255,0.12);
+    --accent2:#e55c1d;
+   /* --text:#e9eef8;*/
+    --card-radius:16px;
 }
 a{
     text-decoration: none;
@@ -33,4 +37,11 @@ p::selection {
     transform:translatex(0);
   }
 }
-
+.nav_pro{
+    z-index: 99;
+    position: fixed;
+    top:0;
+    left: 0;
+    right: 0;
+    backdrop-filter: blur(10px);
+}
