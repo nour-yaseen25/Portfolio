@@ -1,0 +1,36 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    --maincolor:rgb(7, 129, 37);
+     
+}
+a{
+    text-decoration: none;
+}
+nav a,.header button{
+    transition: all 1s ease-in-out!important;
+}
+nav a:hover,.header button:hover {
+  transform: scale(1.2);
+}
+body {
+    transition: background-color 1s ease, color 0.5s ease;
+  }
+
+p::selection {
+    background-color: green;
+    color: #fff;
+}
+@keyframes slideshow {
+  from{
+    transform:translateX(-100%);
+
+  }
+  to{
+    transform:translatex(0);
+  }
+}
+
