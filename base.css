@@ -8,8 +8,13 @@
    --glass-bg: rgba(255,255,255,0.06);
     --glass-border: rgba(255,255,255,0.12);
     --accent2:#e55c1d;
+    --primary:rgb(238, 154, 154);
    /* --text:#e9eef8;*/
+    --white:#fff;
     --card-radius:16px;
+}
+button{
+  background-color: var(--primary);
 }
 a{
     text-decoration: none;
