@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -10,10 +10,17 @@
       integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr"
       crossorigin="anonymous"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <link rel="stylesheet" href="./main.css" />
   </head>
   <body>
-     <div class="bg-layer blobs" id="blobsLayer" aria-hidden="true">
+    <div class="bg-layer blobs" id="blobsLayer" aria-hidden="true">
       <div class="blob b1"></div>
       <div class="blob b2"></div>
     </div>
@@ -54,65 +61,231 @@
               </li>
             </ul>
 
-            <div class="form-check form-switch">
-               <label for="modeSwitch" class="form-check-label">Dark Mode</label>
-               <input class="form-check-input" type="checkbox" id="modeSwitch" />
-            </div>
+            <button id="modeSwitch" class="nav-link border-0 bg-transparent">
+              <i class="fa-solid fa-moon me-2"></i>
+            </button> 
           </div>
         </div>
       </nav>
     </header>
-    <div id="toast">Welcome to my website! 👋</div>
-<main class="m-auto d-flex flex-column justify-content-center align-items-center p-5">
-    <section class="content">  
-    <section class="card hero text-center">
-         <div class="avatar m-auto">NY</div>
-         <!--
+    <!-- Toast Container -->
+    <div class="toast-container position-fixed bottom-0 end-0 p-3">
+      <div
+        id="welcomeToast"
+        class="toast"
+        role="alert"
+        aria-live="assertive"
+        aria-atomic="true"
+      >
+        <div class="toast-body">👋 Welcome to my website!</div>
+      </div>
+    </div>
+
+    <main
+      class="m-auto d-flex flex-column gap-5 justify-content-center align-items-center p-5"
+    >
+      <section class="content">
+        <div class="container">
+          <div class="card hero text-center mt-5">
+            <div class="avatar m-auto">NY</div>
+            <!--
         <h3>Nour Ashraf Yaseen</h3>
         <div class="text-secondary-emphasis">Computer Engineering</div>
         -->
-        <h1>Hello, I'm Nour Yaseen — Computer Engineering Student</h1>
-        <p>Frontend Developer  - Aspiring Software Engineer</p>
+            <h1>Hello, I'm Nour Yaseen — Computer Engineering Student</h1>
+            <p>Frontend Developer - Aspiring Software Engineer</p>
 
-        <div class="d-flex mt-3 gap-3 justify-content-center">
-          <a href="#projects" class="card btn btn-outline-light d-inline-flex align-items-center gap-2 px-3 py-2" role="button" aria-label="View Projects">  View Projects →</a>
-          <a href="#projects" class="card btn btn-outline-light d-inline-flex align-items-center gap-2 px-3 py-2" role="button" aria-label="View Projects"> Download CV</a>
-       </div>
-
-      </section>
-      <section class="card">
-        <h2>About Me</h2>
-       <p>Hello! I'm Nour Yaseen, a Computer Engineering student with a passion for clean code, creative ideas, and user-friendly designs. I enjoy building websites that are not only functional, but also visually appealing and modern. This website is my personal space — a place where I share who I am, my skills, and the projects I’ve worked on. Whether it’s front-end development, responsive design, or learning new tech, I’m always excited to explore more. Feel free to look around and get in touch if you’d like to collaborate, connect, or just say hi!</p>
-        </div>
-      </section>
-       <div class="footer card">Preview: try each background and see how the glass cards and text feel together. Use this to pick the final style for your portfolio.</div>
- </section>
- <section class="card">
-        <div class="d-flex flex-column gap-3 mt-2">
-          <div class="proj">
-            <div class="thumb">JS</div>
-            <div>
-              <h4>Interactive Quiz (Frontend)</h4>
-              <p class="text-secondary-emphasis">Vanilla JS quiz with timer & LocalStorage.</p>
-            </div>
-          </div>
-          <div class="proj">
-            <div class="thumb">DB</div>
-            <div>
-              <h4>Inventory System (JavaFX + PostgreSQL)</h4>
-              <p class="text-secondary-emphasis">Desktop app for farm/manufacturing inventory.</p>
+            <div class="d-flex mt-3 gap-3 justify-content-center">
+              <a
+                href="#projects"
+                class="btn btn-light py-2"
+                role="button"
+                aria-label="View Projects"
+              >
+                View Projects →</a
+              >
+              <a
+                href="#CV"
+                class="btn btn-light px-3 py-2"
+                role="button"
+                aria-label=" Download CV"
+              >
+                Download CV</a
+              >
             </div>
           </div>
         </div>
       </section>
+      <section>
+        <div class="container">
+          <div
+            class="card d-flex flex-column gap-3 justify-content-center align-items-start"
+          >
+            <h2>About Me</h2>
+            <p>
+              Hello! I'm Nour Yaseen, a Computer Engineering student with a
+              passion for clean code, creative ideas, and user-friendly designs.
+              I enjoy building websites that are not only functional, but also
+              visually appealing and modern. This website is my personal space —
+              a place where I share who I am, my skills, and the projects I’ve
+              worked on. Whether it’s front-end development, responsive design,
+              or learning new tech, I’m always excited to explore more. Feel
+              free to look around and get in touch if you’d like to collaborate,
+              connect, or just say hi!
+            </p>
+            <p>
+              I’m a Computer Engineering student with a strong focus on
+              full-stack web development and problem solving. I enjoy building
+              functional and responsive web applications, working across both
+              frontend and backend technologies, and turning ideas into working
+              systems. Over time, I found myself drawn to full-stack
+              development. I enjoy taking an idea and turning it into a working
+              application — designing the interface, building the logic behind
+              it, and improving the overall user experience. Most of my
+              experience comes from academic projects, personal practice, and
+              competitive environments like IEEExtreme and trainings with Gaza
+              Sky Geeks, where I developed a structured way of thinking and
+              approaching problems.
+            </p>
+            <p>
+              Currently, I’m growing my backend development skills while
+              continuing to build real-world projects using modern web
+              technologies. While my main focus is software, I’m especially
+              passionate about hardware. I enjoy building and experimenting with
+              systems, exploring how software interacts with real-world
+              components, and working on hands-on technical challenges.
+            </p>
+            <p>
+              I’m always curious to learn more, especially through real-world
+              projects, tech talks, and workshops. I enjoy exploring new ideas,
+              gaining different perspectives, and continuously improving my
+              skills. If you’d like to connect, collaborate, or share ideas —
+              I’d be happy to hear from you.
+            </p>
+          </div>
+        </div>
+      </section>
+      <section>
+        <div class="container">
+          <div class="card">
+            والحمد لله دائمًا وأبدًا{وَأَن لَّيْسَ لِلْإِنسَانِ إِلَّا مَا
+            سَعَى}
+          </div>
+        </div>
+      </section>
+      <section>
+        <div class="container">
+          <div class="d-flex flex-column gap-3 mt-2 card">
+            <div class="proj">
+              <div class="thumb">JS</div>
+              <div>
+                <h4>Interactive Quiz (Frontend)</h4>
+                <p class="text-secondary-emphasis">
+                  Vanilla JS quiz with timer & LocalStorage.
+                </p>
+              </div>
+            </div>
+            <div class="proj">
+              <div class="thumb">DB</div>
+              <div>
+                <h4>Inventory System (JavaFX + PostgreSQL)</h4>
+                <p class="text-secondary-emphasis">
+                  Desktop app for farm/manufacturing inventory.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
-</main>
+      <section class="contact">
+        <h2>Contact Me</h2>
+        <form
+          action="https://formspree.io/f/mwpbnjwr"
+          method="POST"
+          class="sub-form"
+        >
+          <input type="hidden" name="_next" value="https://google.com" />
+
+          <label>
+            Your Name:
+            <input type="text" name="name" required />
+          </label>
+          <label>
+            Your email:
+            <input type="email" name="email" required />
+          </label>
+          <label>
+            Your message:
+            <textarea name="message" rows="5" required></textarea>
+          </label>
+          <!-- your other form fields go here -->
+          <input type="submit" value="Send" />
+        </form>
+      </section>
+    </main>
+
+    <footer
+      class="footer text-center d-flex flex-wrap gap-5 justify-content-around align-items-center"
+    >
+      <div class="d-flex-col gap-2">
+        <p data-i18n="hero_title">
+          Portfolio Website - <span class="author">Nour Yaseen</span> 🤍
+        </p>
+        <p data-i18n="footer_text">&copy; 2026 All rights reserved.</p>
+        <p data-i18n="footer_madeby"></p>
+      </div>
+      <!--❤️-->
+      <div
+        class="text-center d-flex gap-3 justify-content-center align-items-center"
+      >
+        <a
+          href="mailto:nooryaseen510@gmail.com?subject=Hello%20Nour!&body=I%20would%20like%20to%20connect%20with%20you."
+          onclick="smartMail(event)"
+          class="icon-circle"
+        >
+          <img
+            src="https://img.icons8.com/ios-filled/30/ffffff/gmail.png"
+            alt="Facebook"
+          />
+        </a>
+
+        <a href="#" target="_blank" class="icon-circle">
+          <img
+            src="https://img.icons8.com/ios-filled/30/ffffff/facebook-new.png"
+            alt="Facebook"
+          />
+        </a>
+
+        <a
+          href="https://www.linkedin.com/in/nour-yaseen"
+          target="_blank"
+          class="icon-circle linkedin"
+        >
+          <img
+            src="https://img.icons8.com/ios-filled/30/ffffff/linkedin.png"
+            alt="LinkedIn"
+          />
+        </a>
+
+        <a href="#" target="_blank" class="icon-circle">
+          <img
+            src="https://img.icons8.com/ios-filled/30/ffffff/github.png"
+            alt="GitHub"
+          />
+        </a>
+      </div>
+      <div>
+        <p>Thank you for visiting 👋</p>
+      </div>
+    </footer>
 
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
       crossorigin="anonymous"
     ></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="./main.js"></script>
   </body>
 </html>
