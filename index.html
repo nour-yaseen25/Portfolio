@@ -3,7 +3,17 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>My Website</title>
+    <title>Nour Yaseen | Portfolio</title>
+    <meta
+      name="description"
+      content="Portfolio of Nour Yaseen, a Computer Engineering student focused on software engineering, web development, and front-end development."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Sora:wght@500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -19,264 +29,480 @@
     />
     <link rel="stylesheet" href="./main.css" />
   </head>
-  <body>
-    <div class="bg-layer blobs" id="blobsLayer" aria-hidden="true">
-      <div class="blob b1"></div>
-      <div class="blob b2"></div>
+  <body class="portfolio-page">
+    <div class="bg-layer" aria-hidden="true">
+      <span class="bg-blob blob-one"></span>
+      <span class="bg-blob blob-two"></span>
     </div>
 
-    <header class="header nav_pro">
-      <nav class="navbar navbar-expand-lg shadow">
+    <header class="site-header">
+      <nav class="navbar navbar-expand-lg navbar-dark">
         <div class="container">
-          <a class="navbar-brand fw-bold" href="#">MY WEBSITE</a>
+          <a class="navbar-brand brand-mark" href="#home">Nour Yaseen</a>
 
           <button
             class="navbar-toggler"
             type="button"
             data-bs-toggle="collapse"
             data-bs-target="#mainNav"
+            aria-controls="mainNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
           >
             <span class="navbar-toggler-icon"></span>
           </button>
 
-          <div
-            class="collapse navbar-collapse justify-content-between"
-            id="mainNav"
-          >
-            <ul class="navbar-nav gap-2 ms-auto mx-5">
+          <div class="collapse navbar-collapse" id="mainNav">
+            <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-2">
               <li class="nav-item">
-                <a class="nav-link" href="#home">Home</a>
+                <a class="nav-link" data-nav-link href="#home">Home</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#about">About Me</a>
+                <a class="nav-link" data-nav-link href="#about">About</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#Resume">Resume</a>
+                <a class="nav-link" data-nav-link href="#skills">Skills</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#Project">Projects</a>
+                <a class="nav-link" data-nav-link href="#education"
+                  >Education</a
+                >
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#contact">Contact</a>
+                <a class="nav-link" data-nav-link href="#contact">Contact</a>
+              </li>
+              <li class="nav-item ms-lg-2">
+                <button
+                  id="modeSwitch"
+                  class="theme-toggle btn btn-sm"
+                  type="button"
+                  aria-label="Toggle theme"
+                >
+                  <i class="fa-solid fa-moon"></i>
+                </button>
               </li>
             </ul>
-
-            <button id="modeSwitch" class="nav-link border-0 bg-transparent">
-              <i class="fa-solid fa-moon me-2"></i>
-            </button> 
           </div>
         </div>
       </nav>
     </header>
-    <!-- Toast Container -->
+
     <div class="toast-container position-fixed bottom-0 end-0 p-3">
       <div
         id="welcomeToast"
-        class="toast"
-        role="alert"
-        aria-live="assertive"
+        class="toast portfolio-toast"
+        role="status"
+        aria-live="polite"
         aria-atomic="true"
       >
-        <div class="toast-body">👋 Welcome to my website!</div>
+        <div class="toast-body">Welcome to my portfolio.</div>
       </div>
     </div>
 
-    <main
-      class="m-auto d-flex flex-column gap-5 justify-content-center align-items-center p-5"
-    >
-      <section class="content">
+    <main>
+      <section class="hero-section" id="home">
         <div class="container">
-          <div class="card hero text-center mt-5">
-            <div class="avatar m-auto">NY</div>
-            <!--
-        <h3>Nour Ashraf Yaseen</h3>
-        <div class="text-secondary-emphasis">Computer Engineering</div>
-        -->
-            <h1>Hello, I'm Nour Yaseen — Computer Engineering Student</h1>
-            <p>Frontend Developer - Aspiring Software Engineer</p>
+          <div class="row align-items-center g-4 g-lg-5">
+            <div class="col-lg-7">
+              <span class="eyebrow">Computer Engineering Student</span>
+              <h1 class="display-heading mt-3">
+                Building responsive web applications and learning by creating
+                real projects.
+              </h1>
+              <p class="lead hero-copy mt-4">
+                I am a Computer Engineering student from Nablus with an interest
+                in web development, software engineering, and clean user
+                interfaces.
+              </p>
 
-            <div class="d-flex mt-3 gap-3 justify-content-center">
-              <a
-                href="#projects"
-                class="btn btn-light py-2"
-                role="button"
-                aria-label="View Projects"
-              >
-                View Projects →</a
-              >
-              <a
-                href="#CV"
-                class="btn btn-light px-3 py-2"
-                role="button"
-                aria-label=" Download CV"
-              >
-                Download CV</a
-              >
-            </div>
-          </div>
-        </div>
-      </section>
-      <section>
-        <div class="container">
-          <div
-            class="card d-flex flex-column gap-3 justify-content-center align-items-start"
-          >
-            <h2>About Me</h2>
-            <p>
-              Hello! I'm Nour Yaseen, a Computer Engineering student with a
-              passion for clean code, creative ideas, and user-friendly designs.
-              I enjoy building websites that are not only functional, but also
-              visually appealing and modern. This website is my personal space —
-              a place where I share who I am, my skills, and the projects I’ve
-              worked on. Whether it’s front-end development, responsive design,
-              or learning new tech, I’m always excited to explore more. Feel
-              free to look around and get in touch if you’d like to collaborate,
-              connect, or just say hi!
-            </p>
-            <p>
-              I’m a Computer Engineering student with a strong focus on
-              full-stack web development and problem solving. I enjoy building
-              functional and responsive web applications, working across both
-              frontend and backend technologies, and turning ideas into working
-              systems. Over time, I found myself drawn to full-stack
-              development. I enjoy taking an idea and turning it into a working
-              application — designing the interface, building the logic behind
-              it, and improving the overall user experience. Most of my
-              experience comes from academic projects, personal practice, and
-              competitive environments like IEEExtreme and trainings with Gaza
-              Sky Geeks, where I developed a structured way of thinking and
-              approaching problems.
-            </p>
-            <p>
-              Currently, I’m growing my backend development skills while
-              continuing to build real-world projects using modern web
-              technologies. While my main focus is software, I’m especially
-              passionate about hardware. I enjoy building and experimenting with
-              systems, exploring how software interacts with real-world
-              components, and working on hands-on technical challenges.
-            </p>
-            <p>
-              I’m always curious to learn more, especially through real-world
-              projects, tech talks, and workshops. I enjoy exploring new ideas,
-              gaining different perspectives, and continuously improving my
-              skills. If you’d like to connect, collaborate, or share ideas —
-              I’d be happy to hear from you.
-            </p>
-          </div>
-        </div>
-      </section>
-      <section>
-        <div class="container">
-          <div class="card">
-            والحمد لله دائمًا وأبدًا{وَأَن لَّيْسَ لِلْإِنسَانِ إِلَّا مَا
-            سَعَى}
-          </div>
-        </div>
-      </section>
-      <section>
-        <div class="container">
-          <div class="d-flex flex-column gap-3 mt-2 card">
-            <div class="proj">
-              <div class="thumb">JS</div>
-              <div>
-                <h4>Interactive Quiz (Frontend)</h4>
-                <p class="text-secondary-emphasis">
-                  Vanilla JS quiz with timer & LocalStorage.
-                </p>
+              <div class="d-flex flex-wrap gap-3 mt-4">
+                <a class="btn btn-primary btn-lg" href="#skills">View Skills</a>
+                <a class="btn btn-outline-light btn-lg" href="#contact"
+                  >Contact Me</a
+                >
+              </div>
+
+              <div class="row g-3 mt-5">
+                <div class="col-sm-4">
+                  <div class="mini-stat">
+                    <span>Focus</span>
+                    <strong>Web development</strong>
+                  </div>
+                </div>
+                <div class="col-sm-4">
+                  <div class="mini-stat">
+                    <span>Strength</span>
+                    <strong>Problem solving</strong>
+                  </div>
+                </div>
+                <div class="col-sm-4">
+                  <div class="mini-stat">
+                    <span>Interest</span>
+                    <strong>Front-end design</strong>
+                  </div>
+                </div>
               </div>
             </div>
-            <div class="proj">
-              <div class="thumb">DB</div>
-              <div>
-                <h4>Inventory System (JavaFX + PostgreSQL)</h4>
-                <p class="text-secondary-emphasis">
-                  Desktop app for farm/manufacturing inventory.
+
+            <div class="col-lg-5">
+              <div class="surface-card profile-card h-100">
+                <div class="profile-badge">NY</div>
+                <h2 class="h4 mt-4 mb-2">Nour Yaseen</h2>
+                <p class="text-muted mb-4">
+                  Computer Engineering student at An-Najah University focused on
+                  software engineering, web development, and front-end
+                  development.
                 </p>
+
+                <div class="focus-list">
+                  <div>
+                    <i class="fa-solid fa-laptop-code"></i>
+                    <span>Front-end development</span>
+                  </div>
+                  <div>
+                    <i class="fa-solid fa-diagram-project"></i>
+                    <span>Academic and personal projects</span>
+                  </div>
+                  <div>
+                    <i class="fa-solid fa-robot"></i>
+                    <span>Exploring AI tools and workflows</span>
+                  </div>
+                </div>
+
+                <div class="profile-footer mt-4">
+                  <a href="#about" class="link-arrow">Learn more about me</a>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      <section class="contact">
-        <h2>Contact Me</h2>
-        <form
-          action="https://formspree.io/f/mwpbnjwr"
-          method="POST"
-          class="sub-form"
-        >
-          <input type="hidden" name="_next" value="https://google.com" />
+      <section class="section-block" id="about">
+        <div class="container">
+          <div class="section-heading">
+            <span class="section-kicker">About Me</span>
+            <h2>Professional, curious, and focused on learning by building.</h2>
+          </div>
 
-          <label>
-            Your Name:
-            <input type="text" name="name" required />
-          </label>
-          <label>
-            Your email:
-            <input type="email" name="email" required />
-          </label>
-          <label>
-            Your message:
-            <textarea name="message" rows="5" required></textarea>
-          </label>
-          <!-- your other form fields go here -->
-          <input type="submit" value="Send" />
-        </form>
+          <div class="row g-4 align-items-stretch">
+            <div class="col-lg-8">
+              <div class="surface-card h-100">
+                <p>
+                  I am a Computer Engineering student who enjoys web
+                  development, problem solving, and creating clean interfaces
+                  that are easy to use.
+                </p>
+                <p>
+                  Most of my experience comes from academic projects, personal
+                  practice, and competitive environments such as IEEEXtreme and
+                  trainings with Gaza Sky Geeks, where I developed a structured
+                  approach to problem solving and continuous learning.
+                </p>
+
+                <p>
+                  While my main focus is software engineering and web
+                  technologies, I’m also passionate about hardware and hands-on
+                  technical challenges. I enjoy exploring how software interacts
+                  with real-world systems and continuously improving my
+                  technical and practical skills through projects, workshops,
+                  and self-learning.
+                </p>
+              </div>
+            </div>
+
+            <div class="col-lg-4">
+              <div class="surface-card h-100">
+                <h3 class="h5">What I value</h3>
+                <ul class="bullet-list mt-3 mb-0">
+                  <li>Clear and maintainable code</li>
+                  <li>Responsive layouts that work on every device</li>
+                  <li>Practical learning through real projects</li>
+                  <li>A simple and professional user experience</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-block" id="skills">
+        <div class="container">
+          <div class="section-heading">
+            <span class="section-kicker">Skills</span>
+            <h2>Technologies and tools I use to build and learn.</h2>
+          </div>
+
+          <div class="row g-5 justify-content-center">
+            <div class="col-md-6 col-xl-4">
+              <div class="surface-card h-100 skill-card">
+                <div class="icon-chip"><i class="fa-solid fa-code"></i></div>
+                <h3 class="h5 mt-3">Front-End</h3>
+                <div class="skill-tags">
+                  <span>HTML</span>
+                  <span>CSS</span>
+                  <span>JavaScript</span>
+                  <span>Bootstrap</span>
+                  <span>Responsive Design</span>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 col-xl-4">
+              <div class="surface-card h-100 skill-card">
+                <div class="icon-chip"><i class="fa-solid fa-code"></i></div>
+                <h3 class="h5 mt-3">Back-End</h3>
+                <div class="skill-tags">
+                  <span>Node.js</span>
+                  <span>Express.js</span>
+                  <span>REST APIs</span>
+                  <span>PHP</span>
+                  <span>PostgreSQL</span>
+                  <span>MySQL</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-6 col-xl-4">
+              <div class="surface-card h-100 skill-card">
+                <div class="icon-chip">
+                  <i class="fa-solid fa-screwdriver-wrench"></i>
+                </div>
+                <h3 class="h5 mt-3">Tools</h3>
+                <div class="skill-tags">
+                  <span>Git</span>
+                  <span>GitHub</span>
+                  <span>VS Code</span>
+                  <span>Postman</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-6 col-xl-4">
+              <div class="surface-card h-100 skill-card">
+                <div class="icon-chip">
+                  <i class="fa-solid fa-layer-group"></i>
+                </div>
+                <h3 class="h5 mt-3">Programming</h3>
+                <div class="skill-tags">
+                  <span>Java</span>
+                  <span>Python</span>
+                  <span>C++</span>
+                  <span>SQL</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-6 col-xl-4">
+              <div class="surface-card h-100 skill-card">
+                <div class="icon-chip"><i class="fa-solid fa-brain"></i></div>
+                <h3 class="h5 mt-3">Strengths</h3>
+                <div class="skill-tags">
+                  <span>Problem Solving</span>
+                  <span>Team Work</span>
+                  <span>Continuous Learning</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-block" id="education">
+        <div class="container">
+          <div class="section-heading">
+            <span class="section-kicker">Education</span>
+            <h2>Academic background and the direction I’m building toward.</h2>
+          </div>
+
+          <div class="surface-card timeline-card">
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div>
+                <h3 class="h5 mb-1">
+                  Bachelor’s Degree in Computer Engineering
+                </h3>
+                <p class="text-muted mb-2">
+                  An-Najah University • GPA 4.0 / 4.0
+                </p>
+              </div>
+            </div>
+
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div>
+                <h3 class="h5 mb-1">Academic Direction</h3>
+                <p class="text-muted mb-2">Software-focused learning</p>
+                <p class="mb-0">
+                  Focus areas include Full-Stack development, databases,
+                  object-oriented programming, and software engineering
+                  principles.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-block" id="contact">
+        <div class="container">
+          <div class="section-heading">
+            <span class="section-kicker">Contact</span>
+            <h2>Simple contact details and links.</h2>
+          </div>
+
+          <div class="row g-4 align-items-stretch">
+            <div class="col-lg-5">
+              <div class="surface-card h-100 contact-summary">
+                <h3 class="h5">Let’s connect</h3>
+                <p>
+                  I am open to student opportunities, internships, and
+                  professional connections.
+                </p>
+
+                <div class="contact-links">
+                  <a href="tel:0568858612">
+                    <i class="fa-solid fa-phone"></i>
+                    <span>0568858612</span>
+                  </a>
+                  <a
+                    href="mailto:nooryaseen510@gmail.com?subject=Portfolio%20Inquiry"
+                    onclick="smartMail(event)"
+                  >
+                    <i class="fa-solid fa-envelope"></i>
+                    <span>nooryaseen510@gmail.com</span>
+                  </a>
+                  <a
+                    href="https://www.linkedin.com/in/nour-yaseen"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    <i class="fa-brands fa-linkedin-in"></i>
+                    <span>LinkedIn profile</span>
+                  </a>
+                  <a
+                    href="https://github.com/nour-yaseen25"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    <i class="fa-brands fa-github"></i>
+                    <span>GitHub profile</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-7">
+              <div class="surface-card h-100">
+                <form
+                  action="https://formspree.io/f/mwpbnjwr"
+                  method="POST"
+                  class="contact-form"
+                >
+                  <input
+                    type="hidden"
+                    name="_subject"
+                    value="New portfolio message"
+                  />
+                  <div class="row g-3">
+                    <div class="col-md-6">
+                      <label class="form-label" for="name">Your Name</label>
+                      <input
+                        class="form-control"
+                        id="name"
+                        type="text"
+                        name="name"
+                        placeholder="Your name"
+                        required
+                      />
+                    </div>
+                    <div class="col-md-6">
+                      <label class="form-label" for="email">Your Email</label>
+                      <input
+                        class="form-control"
+                        id="email"
+                        type="email"
+                        name="email"
+                        placeholder="you@example.com"
+                        required
+                      />
+                    </div>
+                    <div class="col-12">
+                      <label class="form-label" for="subject">Subject</label>
+                      <input
+                        class="form-control"
+                        id="subject"
+                        type="text"
+                        name="subject"
+                        placeholder="How can I help?"
+                      />
+                    </div>
+                    <div class="col-12">
+                      <label class="form-label" for="message">Message</label>
+                      <textarea
+                        class="form-control"
+                        id="message"
+                        name="message"
+                        rows="6"
+                        placeholder="Write your message here..."
+                        required
+                      ></textarea>
+                    </div>
+                    <div
+                      class="col-12 d-flex flex-wrap gap-3 align-items-center"
+                    >
+                      <button class="btn btn-primary btn-lg" type="submit">
+                        Send Message
+                      </button>
+                      <span class="form-note">Thanks for reaching out.</span>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
       </section>
     </main>
 
-    <footer
-      class="footer text-center d-flex flex-wrap gap-5 justify-content-around align-items-center"
-    >
-      <div class="d-flex-col gap-2">
-        <p data-i18n="hero_title">
-          Portfolio Website - <span class="author">Nour Yaseen</span> 🤍
-        </p>
-        <p data-i18n="footer_text">&copy; 2026 All rights reserved.</p>
-        <p data-i18n="footer_madeby"></p>
-      </div>
-      <!--❤️-->
-      <div
-        class="text-center d-flex gap-3 justify-content-center align-items-center"
-      >
-        <a
-          href="mailto:nooryaseen510@gmail.com?subject=Hello%20Nour!&body=I%20would%20like%20to%20connect%20with%20you."
-          onclick="smartMail(event)"
-          class="icon-circle"
+    <footer class="site-footer">
+      <div class="container">
+        <div class="row align-items-center g-4">
+          <div class="col-md-6">
+            <p class="footer-brand mb-2">Nour Yaseen</p>
+            <p class="mb-0">
+              Computer Engineering student focused on web development and
+              practical learning.
+            </p>
+          </div>
+          <div class="col-md-6 text-md-end">
+            <div class="footer-socials justify-content-md-end">
+              <a
+                href="mailto:nooryaseen510@gmail.com?subject=Hello%20Nour!&body=I%20would%20like%20to%20connect%20with%20you."
+                onclick="smartMail(event)"
+                aria-label="Email Nour"
+              >
+                <i class="fa-solid fa-envelope"></i>
+              </a>
+              <a
+                href="https://www.linkedin.com/in/nour-yaseen"
+                target="_blank"
+                rel="noreferrer"
+                aria-label="LinkedIn profile"
+              >
+                <i class="fa-brands fa-linkedin-in"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div
+          class="footer-bottom mt-4 pt-3 d-flex flex-wrap justify-content-between gap-2"
         >
-          <img
-            src="https://img.icons8.com/ios-filled/30/ffffff/gmail.png"
-            alt="Facebook"
-          />
-        </a>
-
-        <a href="#" target="_blank" class="icon-circle">
-          <img
-            src="https://img.icons8.com/ios-filled/30/ffffff/facebook-new.png"
-            alt="Facebook"
-          />
-        </a>
-
-        <a
-          href="https://www.linkedin.com/in/nour-yaseen"
-          target="_blank"
-          class="icon-circle linkedin"
-        >
-          <img
-            src="https://img.icons8.com/ios-filled/30/ffffff/linkedin.png"
-            alt="LinkedIn"
-          />
-        </a>
-
-        <a href="#" target="_blank" class="icon-circle">
-          <img
-            src="https://img.icons8.com/ios-filled/30/ffffff/github.png"
-            alt="GitHub"
-          />
-        </a>
-      </div>
-      <div>
-        <p>Thank you for visiting 👋</p>
+          <span
+            >&copy; <span id="currentYear">2026</span> Nour Yaseen. All rights
+            reserved.</span
+          >
+          <span>Built with Bootstrap and clean front-end principles.</span>
+        </div>
       </div>
     </footer>
 
@@ -285,7 +511,6 @@
       integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
       crossorigin="anonymous"
     ></script>
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="./main.js"></script>
   </body>
 </html>
